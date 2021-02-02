@@ -1,37 +1,37 @@
 <html lang="en">
 <!-- Ctrl Alt F auto formats -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Box Model Visual</title>
+    <style>
+        span {
+            background-color: red;
+        }
+
+        div>span {
+            background-color: blueviolet;
+        }
+    </style>
 </head>
 
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Header 1</th>
-                <th>Header 2</th>
-                <th>Header 3</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>Table A</td>
-                <td>Table B</td>
-                <td>Table C</td>
-            </tr>
-        </tbody>
-
-        <tfoot>
-            <tr>
-                <td>Table Cell X</td>
-                <td>Table Cell Y</td>
-                <td>Table Cell Z</td>
-            </tr>
-        </tfoot>
-    </table>
+    <div>
+        <p>Span that come immediatly after any p. Not this one</p>
+        <span>Span that comes immediatly after any p
+            <span> Second Span that comes immediatly after any p</Span>
+        </Span>
+    </div>
+    <div>
+        <div>
+            <span>Nope, not this one.</span>
+            <p>Paragraph 2</p>
+            <span>Span that comes immediatly after any p.
+                this one fits also.
+            </span>
+        </div>
+    </div>
 </body>
 
 </html>
