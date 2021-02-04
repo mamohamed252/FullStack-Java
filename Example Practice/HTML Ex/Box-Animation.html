@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Animation</title>
+    <style>
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                margin-top: 20%;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+        }
+
+        .main_container {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        #fadeInDown {
+            /* -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+            animation-duration: 2s; */
+            width: 100px;
+            height: 100px;
+            padding: 2%;
+            background-color: aqua;
+            text-align: center;
+
+        }
+
+        #shake {
+            /* -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+            animation-duration: 2s; */
+            width: 100px;
+            height: 100px;
+            padding: 2%;
+            background-color: red;
+            text-align: center;
+        }
+
+        #jelly {
+            /* -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+            animation-duration: 2s; */
+            width: 100px;
+            height: 100px;
+            padding: 2%;
+            background-color: green;
+            text-align: center;
+        }
+
+        #bounce {
+            /* -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+            animation-duration: 2s; */
+            width: 100px;
+            height: 100px;
+            padding: 2%;
+            background-color: pink;
+            text-align: center;
+        }
+
+        .top_Row {
+            width: 30%;
+            display: flex;
+            flex: 1;
+            justify-content: 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_container">
+        <div id="fadeInDown" class="top_Row">
+            <h3 style="text-align: center;">Fade Down</h3>
+        </div>
+        <div id="shake" class="top_Row">
+            <h3 style="text-align: center;">Shake</h3>
+        </div>
+        <div id="jelly" class="top_Row">
+            <h3 style="text-align: center;">Jelly</h3>
+        </div>
+        <div id="bounce" class="top_Row">
+            <h3 style="text-align: center;">Bounce</h3>
+        </div>
+    </div>
+</body>
+
+</html>
