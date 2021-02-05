@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Section 1 Portfolio Mohamed Mohamed
+    </title>
+    <script src="https://kit.fontawesome.com/2eb9025005.js" crossorigin="anonymous">
+    </script>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        /* .resume_Contact_Info {
+            float: right;
+        }
+        .resume_Name_Tile{
+            float: left;
+        }
+        .resume_Objective_Summary{
+            clear: both;
+        } */
+        .main_Container {
+            display: block;
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: gray;
+            margin-top: 5%;
+            padding: 1.5%;
+
+        }
+
+        .top_level_info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+        }
+
+        .resume_Name_Tile {
+            margin-left: -150px;
+        }
+
+        .section_2 {
+            display: flex;
+            flex-flow: row-reverse wrap;
+        }
+
+        .left_bottom_level {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%;
+            /* border: solid red; */
+            order: 2;
+
+        }
+
+        .section_2_Heading {
+            background: rgba(207, 199, 161, 0.432);
+        }
+
+        .title_Date {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .right_bottom_level {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10%;
+            order: -2;
+        }
+
+        li {
+            color: red;
+        }
+
+        li b {
+            color: black;
+            font_weight: normal;
+        }
+
+        .c1 {
+            color: red;
+        }
+
+        .c2 {
+            color: blue;
+        }
+
+        .c3 {
+            color: green;
+        }
+
+        .skill_name {
+            justify-content: space-between;
+            display: inline;
+        }
+
+        @media (max-width: 1875px) {
+
+            p {
+                color: red;
+            }
+
+            img {
+                display: none;
+            }
+
+            .section_1 {
+                margin: auto;
+            }
+
+            .section_2 {
+                justify-content: center;
+
+            }
+
+            .progress_bar_border {
+                width: 130% !important;
+                background-color: black;
+            }
+
+            .resume_Name_Tile {
+                font-size: 12px;
+            }
+
+            .resume_Contact_Info {
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 750px) {
+            .main_Container {
+                width: 100% !important;
+            }
+
+            .resume_Name_Tile {
+                font-size: 7.5px;
+                padding-left: 40%;
+            }
+
+            .resume_Contact_Info {
+                font-size: 12px;
+            }
+
+            .progress_bar_border {
+                width: 100% !important;
+                background-color: black;
+            }
+        }
+
+        @media (min-width: 751px) and (max-width: 1438px) {
+            .resume_Name_Tile {
+                font-size: 10px;
+                padding-left: 48%;
+            }
+
+            .resume_Contact_Info {
+                font-size: 12px;
+            }
+
+            .progress_bar_border {
+                width: 100% !important;
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+<!-- main div is called main container -->
+
+<body>
+    <div class="main_Container">
+        <!-- everything in section 1-->
+        <div class="section_1">
+            <div class="top_level_info">
+                <div class="resume_Profile_Picture">
+                    <img src="Profile.png" alt="_profile_Picture" style="height: 80%; width: 50%;">
+                </div>
+                <div class="resume_Name_Tile">
+                    <h1>Mohamed Mohamed</h1>
+                    <h2>Junior Java Software Developer</h2>
+                </div>
+                <div class="resume_Contact_Info">
+                    <table>
+                        <tr>
+                            <td>Name: </td>
+                            <td>Mohamed Mohamed</td>
+                        </tr>
+                        <tr>
+                            <td>Address: </td>
+                            <td>Twin Cities, Minnesota</td>
+                        </tr>
+                        <tr>
+                            <td>Phone: </td>
+                            <td>612-222-0068</td>
+                        </tr>
+                        <tr>
+                            <td>Email: </td>
+                            <td>ma.mohamed252@gmail.com</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="resume_Objective_Summary">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati totam rem, blanditiis nam illo
+                    ipsam quia nisi reprehenderit minus accusantium itaque! Neque unde inventore temporibus voluptates
+                    facilis soluta magnam veniam.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <!-- left hand side -->
+        <div class="section_2">
+            <div class="left_bottom_level">
+                <div class="employment">
+                    <H2 class="section_2_Heading"><i class="fas fa-chevron-down" style="color: red;"></i> Employment
+                    </H2>
+
+                    <div class="job_1">
+                        <div class="title_Date">
+                            <h3 class="job_Title"><span style="color: red;">&#62;</span> Java Apprentice Full-stack
+                                Developer</h3>
+                            <p class="job_Date">
+                                Jan. 2021 - Present
+                            </p>
+                        </div>
+                        <p class="employer">
+                            Software Guild
+                        </p>
+                        <p class="job_Description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magnam nostrum totam
+                            tempore
+                            alias amet fugiat ea ab? In suscipit velit beatae voluptatum, aperiam
+                            accusantium temporibus dolore odio.
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="job_2">
+                        <div class="title_Date">
+                            <h3 class="job_Title"><span style="color: red;">&#62;</span> Java Apprentice Full-stack
+                                Developer</h3>
+                            <p class="job_Date">
+                                Aug. 2020 - Dec. 2020
+                            </p>
+                        </div>
+                        <p class="employer">
+                            Software Guild
+                        </p>
+                        <p class="job_Description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magnam nostrum totam
+                            tempore
+                            alias amet fugiat ea ab? In suscipit velit perspiciatis qui beatae voluptatum, aperiam
+                            accusantium temporibus dolore odio.
+                        </p>
+                    </div>
+                </div>
+                <div class="education">
+                    <h2 class="section_2_Heading"><i class="fas fa-chevron-down" style="color:green;"></i> Education
+                    </h2>
+                    <div class="education_1">
+                        <div class="title_Date">
+                            <h3 class="education_Title"><span style="color: green;">&#62; </span> Apprentice Full-stack
+                                Developer</h3>
+                            <p class="education_Date">
+                                Jan. 2021 - Present
+                            </p>
+                        </div>
+                        <p class="employer">
+                            Software Guild
+                        </p>
+                        <p class="job_Description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magnam nostrum totam
+                            tempore
+                            alias amet fugiat ea ab? In suscipit velit beatae voluptatum, aperiam
+                            accusantium temporibus dolore odio.
+                        </p>
+                    </div>
+                    <hr>
+
+                    <div class="education_2">
+                        <div class="title_Date">
+                            <h3 class="job_Title"><span style="color:green;">&#62;</span> Minnesota State University
+                            </h3>
+                            <p class="job_Date">
+                                Aug. 2020 - Dec. 2020
+                            </p>
+                        </div>
+                        <p class="employer">
+                            B.S. Mass Media
+                        </p>
+                        <p class="job_Description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magnam nostrum totam
+                            tempore
+                            alias amet fugiat ea ab? In suscipit velit perspiciatis qui beatae voluptatum, aperiam
+                            accusantium temporibus dolore odio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- right hand side -->
+            <div class="section_3">
+                <div class="right_bottom_level">
+                    <div class="program_Skills">
+                        <H2>Program Skills</H2>
+                        <span>HTML</span>
+                        <div class="progress_bar_border"
+                            style="border: solid rgba(177, 108, 29, 0.89); height: 12px; width: 100%;">
+                            <div class="progress_bar"
+                                style="background-color: rgb(20, 8, 128); height: 12px; width: 80%; text-align:center">
+                                <span style="text-align:center;">80%</span>
+                            </div>
+                        </div>
+                        <span>CSS</span>
+                        <div class="progress_bar_border"
+                            style="border: solid rgba(177, 108, 29, 0.89); height: 12px; width: 100%;">
+                            <div class="progress_bar"
+                                style="background-color: rgb(0, 162, 255); height: 12px; width: 80px%; text-align:center">
+                                <span style="text-align:center;">80%</span>
+                            </div>
+                        </div>
+                        <span>HTML</span>
+                        <div class="progress_bar_border"
+                            style="border: solid rgba(177, 108, 29, 0.89); height: 12px; width: 100%;">
+                            <div class="progress_bar"
+                                style="background-color: rgb(33, 136, 42); height: 12px; width: 80%; text-align:center">
+                                <span style="text-align:center;">80%</span>
+                            </div>
+                        </div>
+                        <span>MySQL</span>
+                        <div class="progress_bar_border"
+                            style="border: solid rgba(177, 108, 29, 0.89); height: 12px; width: 100%;">
+                            <div class="progress_bar"
+                                style="background-color: rgb(187, 182, 26); height: 12px; width: 80%; text-align:center">
+                                <span style="text-align:center;">80%</span>
+                            </div>
+                        </div>
+                        <span>Java</span>
+                        <div class="progress_bar_border" style="border: solid blue; height: 12px; width: 100%;">
+                            <div class="progress_bar"
+                                style="background-color: red; height: 12px; width: 80%; text-align:center">
+                                <span style="text-align:center;">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="graphic_Skills">
+                        <H2>Graphic Skills</H2>
+
+                        <ul style="list-style-type:square;">
+                            <li class="c1"><b>Adobe Premiere</b></li>
+                            <li class="c2"><b>Adobe InDesign</b></li>
+                            <li class="c3"><b>LightRoom</b></li>
+                        </ul>
+                    </div>
+                    <div class="language_Skills">
+                        <H2>Language Skills</H2>
+                        <div>
+                            <h3 class="skill_name">Language: </h3>
+                            <span>
+                                <i style="color: red;" class="fas fa-circle"></i>
+                                <i style="color: red;" class="fas fa-circle"></i>
+                                <i style="color: red;" class="fas fa-circle"></i>
+                                <i style="color: red;" class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="skill_name">Language: </h3>
+                            <span>
+                                <i style="color: yellow;" class="fas fa-circle"></i>
+                                <i style="color: yellow;" class="fas fa-circle"></i>
+                                <i style="color: yellow;" class="fas fa-circle"></i>
+                                <i style="color: yellow;" class="fas fa-circle"></i>
+                                <i class="fas fa-circle"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

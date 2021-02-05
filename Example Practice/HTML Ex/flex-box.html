@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .menu_container {
+            display: flex;
+            padding: 20px;
+            background-color: #1c1808;
+            font-family: cursive;
+            font-weight: 300;
+            color: white;
+        }
+
+        .menu_item {
+            flex: 1;
+        }
+
+        .more {
+            flex: 2;
+        }
+        .menu_container 
+        .menu_item nav ul{
+            display: flex;
+        }
+        .menu_container 
+        .menu_item nav ul a{
+            color: white;
+            padding: 21px 37px;
+            border-radius: 3px;
+        }
+        .menu_container 
+        .menu_item nav ul a{
+            background-color: #becccf;
+            color: #1c1808;
+        }
+        .title_container{
+            display: flex;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .title_container h3{
+            padding-top: 10px;
+            flex: 7;
+        }
+
+        .title_container h1{
+            flex: 1;
+        }
+        .main_content{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .main_content
+        .sub_main{
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .main_content .img{
+            background-color: #a5c5cc;
+            width: 100%;
+        }
+        .main_content .img img{
+            width: 100%;
+            height: 100px;
+        }
+        .main_content .main-items{
+            border: 1px solid black;
+            width: 360px;
+            height: 390px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .main_content .main-items:hover{
+            box-shadow: 0px 0px 20px #becccf;
+        }
+        .main_content .main-items .img_content{
+            padding: 10px;
+        }
+        .flex_container{
+            width: 60%;
+            height: 200px;
+            margin: 100px auto;
+            display: flex;
+            flex-flow: wrap row-reverse;
+            justify-content: space-around;
+            background-color: black;
+        }
+        .flex_item{
+            background-color: beige;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+        }
+        .flex_container{
+            width: 60%;
+            height: 500px;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: black;
+        }
+        .flex_item{
+            background-color: beige;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+        }
+        .first-item{
+            order: 1;
+        }
+        .second-item{
+            order: 2;
+        }
+        .third-item{
+            order: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu_container">
+        <div class="menu_item">
+            <p>Logo</p>
+        </div>
+        <div class="menu_item">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="title_container">
+        <h1>Page Heading</h1>
+        <h3>Secondary Text</h3>
+    </div>
+    <div class="main_content">
+        <div class="sub_main">
+            <div class="main-items">
+                <div class="img">
+                    <img src="" />
+                </div>
+                <div class="img_content">
+                    <h4>Project One</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut delectus in dolores exercitationem,
+                        aperiam reprehenderit suscipit earum deserunt voluptatibus cum, quaerat ullam fugit expedita rem
+                        similique vitae dolore a corrupti.
+                    </p>
+                </div>
+            </div>
+            <div class="main-items">
+                <div class="img">
+                    <img src="" />
+                </div>
+                <div class="img_content">
+                    <h4>Project Two</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut delectus in dolores exercitationem,
+                        aperiam reprehenderit suscipit earum deserunt voluptatibus cum, quaerat ullam fugit expedita rem
+                        similique vitae dolore a corrupti.
+                    </p>
+                </div>
+            </div>
+            <div class="main-items">
+                <div class="img">
+                    <img src="" />
+                </div>
+                <div class="img_content">
+                    <h4>Project Three</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut delectus in dolores exercitationem,
+                        aperiam reprehenderit suscipit earum deserunt voluptatibus cum, quaerat ullam fugit expedita rem
+                        similique vitae dolore a corrupti.
+                    </p>
+                </div>
+            </div>
+            <div class="main-items">
+                <div class="img">
+                    <img src="" />
+                </div>
+                <div class="img_content">
+                    <h4>Project Four</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut delectus in dolores exercitationem,
+                        aperiam reprehenderit suscipit earum deserunt voluptatibus cum, quaerat ullam fugit expedita rem
+                        similique vitae dolore a corrupti.
+                    </p>
+                </div>
+            </div>
+            <div class="main-items">
+                <div class="img">
+                    <img src="" />
+                </div>
+                <div class="img_content">
+                    <h4>Project Five</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut delectus in dolores exercitationem,
+                        aperiam reprehenderit suscipit earum deserunt voluptatibus cum, quaerat ullam fugit expedita rem
+                        similique vitae dolore a corrupti.
+                    </p>
+                </div>
+            </div>
+            <div class="main-items">
+                <div class="img">
+                    <img src="" />
+                </div>
+                <div class="img_content">
+                    <h4>Project Six</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut delectus in dolores exercitationem,
+                        aperiam reprehenderit suscipit earum deserunt voluptatibus cum, quaerat ullam fugit expedita rem
+                        similique vitae dolore a corrupti.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="flex_container">
+        <div class="flex_item last-item">
+            1
+        </div>
+        <div class="flex_item first-item">
+           2
+        </div>
+        <div class="flex_item second-item">
+           3
+        </div>
+        <div class="flex_item">
+            4
+        </div>
+        <div class="flex_item">
+            5
+        </div>
+        <div class="flex_item">
+            6
+        </div>
+    </div>
+</body>
+
+</html>
