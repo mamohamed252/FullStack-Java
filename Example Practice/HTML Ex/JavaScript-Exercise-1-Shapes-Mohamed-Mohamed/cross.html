@@ -1,4 +1,4 @@
-<!-- Too complicated. Will look into it another time -->
+
 <!-- 
 x        x
  x      x
@@ -29,54 +29,22 @@ x        x
     var userInput;
     userInput = window.prompt("Please enter shape size value: ");
     var sizeValue = userInput;
-    for (var row = 1; row <= userInput; row++) {
       // figure center #  
       //  figure how many spaces left side = starts at 0 + 1 until center # than decrease by 1 until 0 -->
       //  if odd # userInput - 1 = centerSpace
-      //  if even # userInput - 2 = centerSpace
-      var centerSpace = "";
-      if (userInput % 2 == 0) {
-        //even number
-        if (row > userInput / 2) {
-          if (row == userInput) {
-            sizeValue -= 2;
-            for (var x = 0; x <= sizeValue; x++) {
-              centerSpace += " ";
-            }
-            console.log("*" + centerSpace + "*");
-            sizeValue -= 2;
-          } else if (sizeValue <= userInput - 2) {
-            sizeValue += 2;
-            for (var x = 0; x <= sizeValue; x++) {
-              centerSpace += " ";
-            }
-            console.log("*" + centerSpace + "*");
-          } 
-        } else {
-          if (row == 1) {
-            sizeValue -= 2;
-            for (var x = 0; x <= sizeValue; x++) {
-              centerSpace += " ";
-            }
-            console.log("*" + centerSpace + "*");
-            sizeValue -= 2;
-          } else if (sizeValue != 0) {
-            for (var x = 0; x <= sizeValue; x++) {
-              centerSpace += " ";
-            }
-            sizeValue -= 2;
-            console.log("*" + centerSpace + "*");
-          } else if (sizeValue == 0) {
-            centerSpace = "";
-            console.log("**");
-          }
+      //  if even # userInput - 2 = centerSpace8
+    for (var i = 1; i <= userInput; i++) {
+      for (var j = 1; j <= sizeValue; j++) {
+        if (i == j || (i + j) == (parseInt(userInput) + 1)) {8
+          output += "*";
         }
-      } else {
-
+        else {
+          output += " ";
+        }
       }
-
-      // console.log(sizeValue);
+      output += "\n";
     }
+    console.log(output);
 
   </script>
 </body>
