@@ -1,0 +1,45 @@
+<!-- 
+******
+ ****
+  **
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upside-down-trapezoid-Triangle Pattern Mohamed</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var userInput;
+
+    
+    userWidth = window.prompt("Please enter width: ");
+    userHeight = window.prompt("Please enter height: ");
+    var starSize = userWidth;
+    var spacesChar = "";
+    if (userWidth > 12 || userHeight > 5) {
+      alert("Sorry impossible shape");
+    } else {
+      for (var row = 0; row < userHeight; row++) {
+        var printWidth = "";
+        for (var col = 0; col < starSize; col++) {
+          printWidth += "*";
+        }
+        if(row > 0){
+          spacesChar += " ";
+        }
+        starSize -= 2;
+        console.log(spacesChar + printWidth);
+      }
+    }
+
+  </script>
+</body>
+
+</html>

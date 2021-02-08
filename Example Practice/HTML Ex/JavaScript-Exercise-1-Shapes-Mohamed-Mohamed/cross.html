@@ -1,0 +1,84 @@
+<!-- Too complicated. Will look into it another time -->
+<!-- 
+x        x
+ x      x
+  x    x
+   x  x
+    xx
+   x  x
+  x    x
+ x      x
+x        x  
+-->
+<!--figure center #  -->
+<!-- figure how many spaces left side = starts at 0 + 1 until center # than decrease by 1 until 0 -->
+<!-- top  or bottom centerSpace = topOrBottomXs's * 2 than - until 0 (center) once passed center add 2 until starting centerSpace # -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cross Mohamed</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var userInput;
+    userInput = window.prompt("Please enter shape size value: ");
+    var sizeValue = userInput;
+    for (var row = 1; row <= userInput; row++) {
+      // figure center #  
+      //  figure how many spaces left side = starts at 0 + 1 until center # than decrease by 1 until 0 -->
+      //  if odd # userInput - 1 = centerSpace
+      //  if even # userInput - 2 = centerSpace
+      var centerSpace = "";
+      if (userInput % 2 == 0) {
+        //even number
+        if (row > userInput / 2) {
+          if (row == userInput) {
+            sizeValue -= 2;
+            for (var x = 0; x <= sizeValue; x++) {
+              centerSpace += " ";
+            }
+            console.log("*" + centerSpace + "*");
+            sizeValue -= 2;
+          } else if (sizeValue <= userInput - 2) {
+            sizeValue += 2;
+            for (var x = 0; x <= sizeValue; x++) {
+              centerSpace += " ";
+            }
+            console.log("*" + centerSpace + "*");
+          } 
+        } else {
+          if (row == 1) {
+            sizeValue -= 2;
+            for (var x = 0; x <= sizeValue; x++) {
+              centerSpace += " ";
+            }
+            console.log("*" + centerSpace + "*");
+            sizeValue -= 2;
+          } else if (sizeValue != 0) {
+            for (var x = 0; x <= sizeValue; x++) {
+              centerSpace += " ";
+            }
+            sizeValue -= 2;
+            console.log("*" + centerSpace + "*");
+          } else if (sizeValue == 0) {
+            centerSpace = "";
+            console.log("**");
+          }
+        }
+      } else {
+
+      }
+
+      // console.log(sizeValue);
+    }
+
+  </script>
+</body>
+
+</html>

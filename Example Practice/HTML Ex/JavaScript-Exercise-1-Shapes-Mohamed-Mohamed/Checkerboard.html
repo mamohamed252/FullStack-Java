@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard Pattern Mohamed</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var inputHeight;
+        var inputWidth;
+
+
+        inputWidth = window.prompt("Please enter width value: ");
+        inputHeight = window.prompt("Please enter height value: ");
+
+        for (var row = 1; row <= inputHeight; row++) {
+            var printWidth = "";
+            var smallerWidth = " ";
+            var biggerWidth = "";
+            for (var col = 0; col < inputWidth; col++) {
+                if (row % 2 == 0) {
+                    // even row - smaller * row
+                    if (col < (inputWidth / 2) - 1) {
+                        smallerWidth += "* ";
+                        printWidth = smallerWidth;
+                    }
+
+                } else {
+                    // odd row 
+                    if (col < inputWidth / 2) {
+                        biggerWidth += "* ";
+                        printWidth = biggerWidth;
+                    }
+                }
+            }
+            console.log(printWidth);
+        }
+
+    </script>
+</body>
+
+</html>
