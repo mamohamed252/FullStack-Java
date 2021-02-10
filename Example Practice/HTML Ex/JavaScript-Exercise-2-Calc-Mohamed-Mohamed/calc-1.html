@@ -8,7 +8,12 @@
 </head>
 <body>
   <script type="text/javaScript">
-  
+  var userInput = prompt("Enter equation seperated by spaces (x+ y+ z)");
+  var array1 = userInput.split(" ");
+  var sum = 0;
+
+  array1.array.forEach(element => sum += parseInt(element));
+  console.log("Total: " + sum);
 
   </script>
 </body>

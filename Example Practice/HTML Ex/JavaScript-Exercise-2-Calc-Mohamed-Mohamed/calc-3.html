@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calc 3 HTML/JS Mohamed</title>
+</head>
+
+<body>
+  <script style="text/javascript">
+    var userInput = prompt("Enter equation seperated by spaces and completed with space and semicolon (x + y+ z ;)");
+    document.write("Enter equation: <br>");
+    var userInputArray = userInput.split(";");
+
+    for (var index = 0; index < userInputArray.length; index++) {
+      document.write(userInputArray[index] + "<br>");
+    }
+    for (var index = 0; index < userInputArray.length; index++) {
+      var newUserInput = userInputArray[index].trim();
+      if (newUserInput.length == 0) {
+        break;
+      }
+
+
+      var firstNum = newUserInput.split(/\s*[\+\-]\s*/, 1);
+      var restValue = newUserInput.substring(firstNum.length, newUserInput.length).match(/\s*[\+\-]\s*\d+\^*/g);
+      var sum = parseInt(firstNum[0]);
+      var sum2 = sum;
+      // checking for one number
+      if (firstNum[0].indexOf("^")){
+        sum = Math.pow(sum, 2 );
+      }
+
+      if (restValue != null) {
+
+        for (var j = 0; j < restValue.length; j++) {
+          // trims values to the left of rest of value 
+          var trimmedLeft = restValue[j].trim();
+          var signValue = trimmedLeft.charAt(0);
+          // includes ^
+          var nextNumsString = trimmedLeft.substring(1, trimmedLeft.length);
+          var nextNums = parseInt(nextNumsString);
+          if (nextNumsString.indexOf("^")) {
+            //if ^ found it will return index where it's found 
+            nextNums = Math.pow(nextNums, 2);
+          }
+
+          if (signValue == "+") {
+            sum += nextNums;
+          } else {
+            sum -= nextNums;
+          }
+        }
+        document.write("Sum: " + sum + " <br>");
+      } else {
+        if (firstNum[0].indexOf("^")) {
+          //if ^ found it will return index where it's found 
+          sum2 = Math.pow(sum2, 2);
+        }
+        document.write("Sum: " + sum2 + " <br>");
+      }
+
+    }
+  </script>
+
+</body>
+
+</html>
