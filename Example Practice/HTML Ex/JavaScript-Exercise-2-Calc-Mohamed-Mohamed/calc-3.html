@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <script style="text/javascript">
+  <script type="text/javascript">
     var userInput = prompt("Enter equation seperated by spaces and completed with space and semicolon (x + y+ z ;)");
     document.write("Enter equation: <br>");
     var userInputArray = userInput.split(";");
@@ -18,48 +18,49 @@
       document.write(userInputArray[index] + "<br>");
     }
     for (var index = 0; index < userInputArray.length; index++) {
-      var newUserInput = userInputArray[index].trim();
-      if (newUserInput.length == 0) {
-        break;
-      }
-
-
-      var firstNum = newUserInput.split(/\s*[\+\-]\s*/, 1);
-      var restValue = newUserInput.substring(firstNum.length, newUserInput.length).match(/\s*[\+\-]\s*\d+\^*/g);
-      var sum = parseInt(firstNum[0]);
-      var sum2 = sum;
-      // checking for one number
-      if (firstNum[0].indexOf("^")){
-        sum = Math.pow(sum, 2 );
-      }
-
-      if (restValue != null) {
-
-        for (var j = 0; j < restValue.length; j++) {
-          // trims values to the left of rest of value 
-          var trimmedLeft = restValue[j].trim();
-          var signValue = trimmedLeft.charAt(0);
-          // includes ^
-          var nextNumsString = trimmedLeft.substring(1, trimmedLeft.length);
-          var nextNums = parseInt(nextNumsString);
-          if (nextNumsString.indexOf("^")) {
-            //if ^ found it will return index where it's found 
-            nextNums = Math.pow(nextNums, 2);
-          }
-
-          if (signValue == "+") {
-            sum += nextNums;
-          } else {
-            sum -= nextNums;
-          }
-        }
-        document.write("Sum: " + sum + " <br>");
+      var trimmedUserInput = userInputArray[index].trim();
+      if (trimmedUserInput.length == 0) {
+        // if trimmedUserInput is empty, do nothing because it will break otherwise 
+        // this allows you to have empty spaces between semicolons and still run normal equation without breaking  
       } else {
-        if (firstNum[0].indexOf("^")) {
-          //if ^ found it will return index where it's found 
-          sum2 = Math.pow(sum2, 2);
+        // if it's not empty run the following..
+        var firstNum = trimmedUserInput.split(/\s*[\+\-]\s*/, 1);
+        var signAndNumberArray = trimmedUserInput.substring(firstNum.length, trimmedUserInput.length).match(/\s*[\+\-]\s*\d+\^*/g);
+        var sum = parseInt(firstNum[0]);
+        var sum2 = sum;
+
+
+        // checking for one number
+        if (firstNum[0].indexOf("^") >= 0) {
+          sum = Math.pow(sum, 2);
         }
-        document.write("Sum: " + sum2 + " <br>");
+
+        if (signAndNumberArray != null) {
+
+          for (var j = 0; j < signAndNumberArray.length; j++) {
+            // trims values to the left of rest of value 
+            var trimmedLeft = signAndNumberArray[j].trim();
+            var signValue = trimmedLeft.charAt(0);
+            // includes ^
+            var numValueString = trimmedLeft.substring(1, trimmedLeft.length);
+            var numValue = parseInt(numValueString);
+            if (numValueString.indexOf("^")>= 0) {
+              //if ^ found it will return index where it's found 
+              numValue = Math.pow(numValue, 2);
+            } else if (signValue == "+") {
+              sum += numValue;
+            } else {
+              sum -= numValue;
+            }
+          }
+          document.write("Sum: " + sum + " <br>");
+        } else {
+          if (firstNum[0].indexOf("^") >= 0) {
+            //if ^ found it will return index where it's found 
+            sum2 = Math.pow(sum2, 2);
+          }
+          document.write("Sum: " + sum2 + " <br>");
+        }
       }
     }
   </script>

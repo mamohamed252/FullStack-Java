@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Function Call</title>
-  <script>
+  <!-- <script>
     // define/declare funciton
 
     function customMessage(msg, times){
@@ -17,7 +17,63 @@
 
     //invoke the function
     customMessage("error- invalid", 10)
+  </script> -->
+
+  <!-- <script>
+    function add(n + m){
+      return n + m;
+    }
+
+    // invoking
+    var results = add(5, 6);
+    console.log(results);
+  </script> -->
+
+
+  <!-- <script>
+
+    var person = {
+      firstName: "",
+      lastName: "",
+      age: 0
+    }
+
+    person.firstName = "Luke";
+    person.lastName = "Lance"
+    person.age = 23;
+
+    //invoke
+    printPerson(person); // person is an object
+    console.log(person.firstName);
+
+    // declare function
+    function printPerson(p){
+      p.firstName = "Roy";
+      for(var key in p){
+        console.log("This part of key " + key);
+        console.log("this is part of p[key] " + p[key]);
+      }
+    }
+  </script> -->
+
+  <script>
+    var sumOfSquare={
+        first:0,
+        second:0,
+        square: function(){
+            this.result=((this.first*this.first)+(this.second*this.second));
+            return this.result;
+        }
+    }
+    sumOfSquare.first=2;
+    sumOfSquare.second=3;
+    var FR= sumOfSquare.square();
+    console.log(FR);
+    console.log(sumOfSquare);
+
+
   </script>
+
 </head>
 <body>
   
