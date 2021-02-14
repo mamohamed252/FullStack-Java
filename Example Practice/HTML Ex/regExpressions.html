@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reg Expressions</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var re = /(\w+)\s(\w+)/;
+    var str = "John Smith";
+    var newStr = str.replace(re, '$2, $1');
+    
+    
+    var string = "Visit W3Schools";
+    var patt = /w3schools/i;
+    var result = string.match(patt);
+    
+    console.log(newStr);
+    console.log(result);
+  </script>
+</body>
+
+</html>

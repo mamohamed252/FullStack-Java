@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <script>
+    var instructor = function(firstName, lastName, courses = []){
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.classesTeaching = courses;
+      this.employer = "Tek";
+      this.info = function() { console.log(this.firstName, this.lastName, " is employed by ", this.employer)}
+    }
+    
+   
+    var instructor1 = new instructor("John", "Smith", ["Js", "CSS", "HTML"]);
+    var instructor2 = new instructor("firstName", "lastName", ["Js", "CSS"]);
+    var instructor3 = new instructor();
+
+
+  </script> -->
+
+
+  <!-- <script>
+    var instructor = function(firstName, lastName, courses = []){
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.classesTeaching = courses;
+      this.employer = "Tek";
+      //this.info = function() { console.log(this.firstName, this.lastName, " is employed by ", this.employer)}
+    }
+     instructor.prototype.info = function() { console.log(this.firstName, this.lastName, " is employed by ", this.employer)};
+   
+    var instructor1 = new instructor("John", "Smith", ["Js", "CSS", "HTML"]);
+    var instructor2 = new instructor("firstName", "lastName", ["Js", "CSS"]);
+    var instructor3 = new instructor();
+
+
+  </script> -->
+<!-- 
+  <script>
+     scope = "Global";
+
+    function checkScope(){
+      scope = "local";
+      return scope;
+    }
+
+    var result = checkScope();
+    console.log("result = ", result);
+    console.log("2 scope = ", scope)
+
+  </script> -->
+
+
+<!-- <script>
+  var scope = "Global";
+
+ function checkScope(){
+   var scope = "local";
+   return scope;
+ }
+
+ var result = checkScope();
+ console.log("result = ", result);
+ console.log("2 scope = ", scope)
+
+
+</script> -->
+
+<!-- <script>
+  var scope = "global";
+
+  function checkScope(){
+    //var scope = "localA";
+    function nested(){
+      //var scope = "nested";
+      return scope;
+    }
+    return nested();
+  }
+
+  var result = checkScope();
+  console.log(result);
+</script> -->
+
+<script>
+  var uniqueInteger = (function(){
+    var counter = 0;
+    return function(){return counter++; };
+  }) ();
+
+  console.log(uniqueInteger());
+  console.log(uniqueInteger());
+  console.log(uniqueInteger());
+
+
+</script>
+
+</body>
+</html>
