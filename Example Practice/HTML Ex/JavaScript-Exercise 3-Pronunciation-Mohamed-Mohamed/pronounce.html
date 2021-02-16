@@ -28,32 +28,88 @@
 
     function mainEntry(fileContentLoaded) {
       //        this is an example use
-      console.log("Where the content is: ", fileContentLoaded.split("\n"))
+      // console.log("Where the content is: ", fileContentLoaded.split("\n"))
       var splitContent = fileContentLoaded.split("\n");
       //call method
       //do logic
 
-      var userInput = window.prompt("Enter a word");
+      var userInput = prompt("Enter a word").toUpperCase();
       //Loop through until userInput if found
       var counter = 0;
       var foundWord = "";
 
       do {
         var firstWord = splitOnSpace(splitContent[counter]).before;
-        if (userInput.toUpperCase() == firstWord.toUpperCase()) {
+        // console.log(firstWord);
+        if (userInput === firstWord) {
           foundWord = firstWord;
-          console.log("Your word is : " + userInput + " FOUND WORD!");
           break;
         } else if (133341 == counter) {
-          console.log("Word not found", firstWord.toUpperCase());
           break;
-        } 
-
+        }
+        // phase one done.
         counter++;
       } while (userInput.toUpperCase() != splitOnSpace(splitContent[counter]).before && counter != 133342)
-      
-      var result = splitOnSpace(splitContent[0]);
-      console.log(result);
+
+      var result = splitOnSpace(splitContent[counter]);
+      if (counter == 133341) {
+        console.log("Word not found");
+
+      } else {
+        console.log("FOUND WORD! Your word is : " + userInput);
+        console.log("Pronunciation: " + result.after);
+      }
+      console.log("Identical: " + printArray(searchAllWords(result.after, splitContent)));
+
+      //phase 2 done
+
+      console.log("Replace: " + printArray(replaceWord(result.after, splitContent)));
+      // phase 3 done
+    }
+
+    // helping function
+
+    function printArray(arr) {
+      var stringA = "";
+      for (var i = 0; i < arr.length; i++) {
+        stringA += arr[i] + " ";
+
+      }
+      return stringA;
+    }
+
+    function searchAllWords(pronun, dict) {
+      var array = [];
+      for (var i = 0; i < dict.length; i++) {
+        var searchResult = splitOnSpace(dict[i]);
+        if (searchResult.after == pronun) {
+          array.push(searchResult.before);
+        }
+      }
+      return array;
+    }
+
+    function replaceWord(pronun, dict) {
+
+      var newPronun = pronun.trim().split(" ");
+      var array = [];
+      for (var i = 0; i < newPronun.length; i++) {
+        var temp = newPronun[i];
+        newPronun[i] = "\\w+";
+        var query = newPronun.join(" ");
+        //console.log(query);
+        
+        for (var j = 0; j < dict.length; j++) {
+          var searchResult = splitOnSpace(dict[j]);
+          //converts query to regex
+          if (searchResult.after.search(RegExp(query))> -1 && array.find(word => word == searchResult.before) == undefined) {
+            array.push(searchResult.before);
+            //console.log(searchResult);
+          }
+        }
+        newPronun[i] = temp;
+      }
+      return array;
     }
 
     function splitOnSpace(s) {
