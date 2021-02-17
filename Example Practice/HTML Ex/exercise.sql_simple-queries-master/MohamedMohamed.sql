@@ -45,3 +45,13 @@ FROM employees, offices
 WHERE employees.officeCode = offices.officeCode
 AND offices.city = ('San Francisco')
 ORDER BY lastName ASC;
+
+  /* Part 6
+Write a query to display the Name, Product Line, Scale, and Vendor of all of the car products – both classic and vintage.
+The output should display all vintage cars first (sorted alphabetically by name), and all classic cars last (also sorted alphabetically by name).*/
+
+SELECT productName, productLine, productScale, productVendor
+FROM products
+WHERE productLine = 'Vintage Cars'
+or productLine = 'Classic Cars'
+ORDER BY productName ASC;
