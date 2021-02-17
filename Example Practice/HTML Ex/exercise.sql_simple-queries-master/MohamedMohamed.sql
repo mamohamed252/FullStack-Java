@@ -27,4 +27,11 @@ The output should be sorted by the customer’s last name (ascending).*/
 SELECT DISTINCT STATUS
 FROM orders
 ORDER BY STATUS ASC;
+
+  /* Part 4
+ Select all fields from the payments table for payments made on or after January 1, 2005.
+Output should be sorted by increasing payment date.*/
  
+SELECT * FROM payments
+WHERE paymentDate > '2005/01/01'
+ORDER BY paymentDate ASC;
